@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Release ticket</title>
+  <link rel="stylesheet" href="ui/frost.css">
+</head>
+<body>
+  <div class="frame">
+    <div class="badge">Archive release</div>
+    <h1>Your bundle is being cleared</h1>
+    <p class="sub">This page validates the release note and opens the delivery channel. Keep the tab open until the handoff completes.</p>
+    <div class="ticket" id="ticket" aria-live="polite">
+      <span>channel</span> …<br>
+      <span>hop</span> …
+    </div>
+    <ol class="timeline" id="timeline">
+      <li id="t0">Load release note</li>
+      <li id="t1">Decode channel ticket</li>
+      <li id="t2">Open sandbox channel</li>
+      <li id="t3">Release to browser</li>
+    </ol>
+    <p class="sr-only" id="live"></p>
+  </div>
+  <script type="module" src="engine/route.mjs"></script>
+</body>
+</html>
